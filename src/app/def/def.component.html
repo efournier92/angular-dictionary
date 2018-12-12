@@ -1,0 +1,11 @@
+<mat-card style="margin: 16px">
+  <mat-card-subtitle>
+    {{ def.partOfSpeech }}
+  </mat-card-subtitle>
+  <mat-card-title>
+    {{ def.content }}
+  </mat-card-title>
+  <mat-card-content *ngIf="def.synonyms && def.synonyms.length">
+    Synonyms: <button mat-button *ngFor="let syn of def.synonyms" (click)="defineSyn(syn)">{{ syn }} </button>
+  </mat-card-content>
+</mat-card>
