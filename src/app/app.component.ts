@@ -20,6 +20,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.defineWord('test');
   }
+
   defineWord(word: string): void {
     this.dataService.getDefinitions(word).subscribe(
       (data: any) => {
